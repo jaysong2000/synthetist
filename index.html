@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello Page</title>
+  <meta charset="UTF-8">
+  <title>Small Choices</title>
+  <style>
+    /* Make page fill the viewport and remove default margins */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Container holds header and split background area */
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Header styling */
+    header {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #000000;
+      padding: 1rem 0;
+      flex: 0 0 auto; /* don’t stretch */
+    }
+
+    /* Main area splits into two halves */
+    .split {
+      display: flex;
+      flex: 1 1 auto; /* fill remaining space */
+    }
+    .left-half, .right-half {
+      flex: 1 1 50%;
+    }
+    .left-half {
+      background-color: #F77A7A;
+    }
+    .right-half {
+      background-color: #9194FA;
+    }
+  </style>
 </head>
 <body>
-    hello
+  <div class="container">
+    <header>
+      Small choices lead to vast differences
+    </header>
+    <div class="split">
+      <div class="left-half"></div>
+      <div class="right-half"></div>
+    </div>
+  </div>
 </body>
 </html>
+
